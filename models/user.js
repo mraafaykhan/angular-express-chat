@@ -1,8 +1,8 @@
 let mongoose = require("mongoose");
 let bcrypt= require('bcrypt');
-let schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
-var userSchema = new schema({
+var UserSchema = new Schema({
     email:{
         type: String,
         lowercase:true,
@@ -19,22 +19,27 @@ var userSchema = new schema({
     }
 })
 
-userSchema.pre('save', function(next){
-    let user = this;
-    if(this.isModified('password') || this.isNew){
-        bcrypt.hash(user.password, salt, function(err,hash){
-            if(err){
-                return next(err)
-            }
-            user.password = hash;
-            next();
-        })
-    } else{
-        return next()
+UserSchema.pre('save', function(next) {
+    var user = this;
+    if (this.isModified('password') || this.isNew) {
+      bcrypt.genSalt(10, function(err, salt) {
+        if (err) {
+          return next(err);
+        }
+        bcrypt.hash(user.password, salt, function(err, hash) {
+          if (err) {
+            return next(err);
+          }
+          user.password = hash;
+          next();
+        });
+      });
+    } else {
+      return next();
     }
-})
+  });
 
-userSchema.methods.comparePassword = function(pwd,cb){
+UserSchema.methods.comparePassword = function(pwd,cb){
     bcrypt.compare(pwd, this.password, function(err,isMatch){
         if(err){
             return cb (err)
@@ -45,4 +50,4 @@ userSchema.methods.comparePassword = function(pwd,cb){
     })
 }
 
-mongoose.exports = mongoose.model('user',userSchema);
+module.exports = mongoose.model('User',UserSchema);

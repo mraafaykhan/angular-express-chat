@@ -1,5 +1,5 @@
 let router = require("express").Router();
-let user = require('../models/user');
+let User = require('../models/user');
 let passport = require('passport');
 let jwt = require('jsonwebtoken');
 
@@ -7,7 +7,7 @@ let jwt = require('jsonwebtoken');
 
 // Todos:
 // 1.add route for admin approval of users when scaling,
-// foo bar qux
+// create admin users for administration :P 
 
 
 router.post('/register', function(req,res){
@@ -18,16 +18,17 @@ router.post('/register', function(req,res){
         })
         return;
     } 
-    let user= new user({
+    let user= new User({
         email:req.body.email,
         password: req.body.password,
         isApproved:true
     })
     user.save(function(err){
         if(err){
+            console.log("error Error!");
             res.json({
                 success:false,
-                messsage:err
+                messsage:"sum ting wong! "+ err || " "
             })
             return;
         }
@@ -47,7 +48,7 @@ router.patch('/register', function(req,res){
         })
         return;
     }
-    user.findOneAndUpdate({
+    User.findOneAndUpdate({
         email:req.body.email
     }, function(err, u){
     if(err || !u){
@@ -114,3 +115,4 @@ router.patch('/register', function(req,res){
         })
     })
 })
+module.exports = router;
