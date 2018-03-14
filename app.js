@@ -3,6 +3,8 @@ let bodyParser = require('body-parser')
 let cors = require('cors')
 
 let app = express();
+app.use(bodyParser.json());
+
 
 app.get('/', function(req,res){
     res.json({
@@ -10,4 +12,4 @@ app.get('/', function(req,res){
     })
 })
 
-app.listen(()=> console.log("app listening on port 3000"),3000);
+app.listen(3000,()=> console.log('app listening on port 3000'));
