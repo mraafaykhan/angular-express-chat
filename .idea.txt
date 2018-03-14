@@ -1,0 +1,5 @@
+This file is for the overview of the application
+Todo:
+create usermodel
+setup jwt auth
+make html and css code for the design and interface of the application
