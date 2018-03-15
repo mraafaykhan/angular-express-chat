@@ -2,3 +2,5 @@
 yarn.lock
 .ideas.txt
 .vscode/*
+package-lock.json
+          package.json.lock

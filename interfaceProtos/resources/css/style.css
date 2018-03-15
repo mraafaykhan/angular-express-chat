@@ -1,0 +1,159 @@
+/* 
+    our color #00a8ff;
+*/
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    margin:0;
+    padding: 0;
+    font-family:  'IBM Plex Sans','Arial', sans-serif;
+    font-size: 22px;
+    color:#fff;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* Resuable Components */
+.row{
+    width: 1140px;
+    display: block;
+    margin: 0 auto;
+}
+header{
+    text-align: center;
+    background-color: rgba(0,0,0,0.1);
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn{
+    display:inline-block;
+    padding : 5% 20%;
+    font-weight: 300;
+    border-radius: 50px; 
+    font-size: 70%;
+    transition: background-color 0.3s, border 0.3s;
+}
+.btn-full{
+    background-color: #00a8ff;
+    border: 1px solid #00a8ff;
+    color:#fff;    
+}
+.btn-full:hover{
+    background-color:#0092dd;
+    border: 1px solid #0092dd;
+    
+}
+button:focus{
+    outline: 0;
+}
+
+
+/* Headings */
+
+h1,h2,h3{
+    font-weight: 100;
+    text-transform: uppercase;
+}
+h1{
+    color :#fff;
+    font-size: 220%;   
+    word-spacing: 5px;
+     
+}
+h2{
+    font-size: 200%;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+h2:after{
+    content:' ';
+    height: 2px;
+    background-color: #00a8ff;
+    width: 80px;
+    display: block;
+    margin:20px auto;
+
+}
+
+
+/* 
+    Login Section
+*/
+.section-login{
+    position: relative;
+    height: 100vh;
+}
+
+.login{
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    border-radius: 20px;
+    border: 1px solid #dcdde1;
+    padding : 20px 7% 0 7%;
+    
+}
+.section-login input{
+    display: block;
+    font-size: 70%;
+}
+.section-login label{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 80%;
+    margin-bottom: 5px;
+}
+.section-login input{
+    margin-bottom: 15px;
+    height: 25px;
+}
+.login-box{
+    height: 90%;
+    width: 100%;
+}
+.login-box button{
+    width: 100%;
+    margin-top: 10px;
+}
+.alternatives{
+    width: 100%;
+    font-size: 65%;
+    margin-top: 40px;
+    color:#00a8ff;
+    word-spacing: -2px;
+    height: 10%;
+    padding-bottom: 20px;
+
+}
+
+.alternatives *{
+    display: inline-block;
+}
+.floatRight{
+    float:left;
+}
+.floatLeft{
+    float: right;
+}
+/* 
+Loginpage stuff */
+
+.background{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img/back.jpeg);
+    background-position: fixed;
+    background-size: cover;
+    height: 100vh;
+}

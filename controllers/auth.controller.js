@@ -8,6 +8,8 @@ let jwt = require('jsonwebtoken');
 // Todos:
 // 1.add route for admin approval of users when scaling,
 // create admin users for administration :P 
+// replace error cases and when user is not found currently, it returns one res if either one of the events fire
+
 
 
 router.post('/register', function(req,res){
