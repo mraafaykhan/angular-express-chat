@@ -1,5 +1,5 @@
 let router = require("express").Router();
-let User = require('../models/user');
+let Users = require('../models/user');
 let passport = require('passport');
 let jwt = require('jsonwebtoken');
 
@@ -37,7 +37,7 @@ router.post('/register', function(req,res){
             messsage:"user sucessfully created"
         })
     })
-
+})
 
 // password update case
 router.patch('/register', function(req,res){
@@ -48,18 +48,18 @@ router.patch('/register', function(req,res){
         })
         return;
     }
-    User.findOneAndUpdate({
+    Users.findOneAndUpdate({
         email:req.body.email
-    }, function(err, u){
-    if(err || !u){
+    }, function(err, user){
+    if(err || !user){
         res.json({
             message: "An Error occured :'(" + err || " ",
             success:false
         })
         return;
     }
-    u.password = req.body.password;
-    u.save(function(err){
+    user.password = req.body.password;
+    user.save(function(err){
         if(err){
             res.json({
                 message:"dearly sorry bro, an occured has occured " + err || " ",
@@ -76,17 +76,18 @@ router.patch('/register', function(req,res){
     })
 })
 
-    router.post('/login', function(req,res){
+router.post('/login', function(req,res){
+        console.log('qux is happening');
         if(!req.body.email || !req.body.password){
             res.json({
                 success:false,
                 message:'please enter email / password'
             })
         }
-        user.findOne({
+        Users.findOne({
             email:req.body.email
-        } , function(err, u){
-            if(err || !u){
+        } , function(err, user){
+            if(err || !user){
                 res.json({
                     message:'No user found ' + err|| " ",
                     success:false
@@ -113,6 +114,6 @@ router.patch('/register', function(req,res){
                 }
             })
         })
-    })
-})
+    });
+
 module.exports = router;
