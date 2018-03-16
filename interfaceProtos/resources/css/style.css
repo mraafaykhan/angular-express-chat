@@ -13,6 +13,7 @@ html{
     font-family:  'IBM Plex Sans','Arial', sans-serif;
     font-size: 22px;
     color:#fff;
+    overflow: hidden;
 }
 a{
     text-decoration: none;
@@ -52,7 +53,7 @@ header{
     border: 1px solid #0092dd;
     
 }
-button:focus{
+*:focus{
     outline: 0;
 }
 
@@ -82,6 +83,7 @@ h2:after{
     width: 80px;
     display: block;
     margin:20px auto;
+    margin-bottom: 30px;
 
 }
 
@@ -108,6 +110,12 @@ h2:after{
 .section-login input{
     display: block;
     font-size: 70%;
+    margin-bottom: 25px;
+    height: 25px;
+    border: 0 solid transparent;
+    border-radius: 8px;
+
+    
 }
 .section-login label{
     display: inline-block;
@@ -116,17 +124,13 @@ h2:after{
     font-size: 80%;
     margin-bottom: 5px;
 }
-.section-login input{
-    margin-bottom: 15px;
-    height: 25px;
-}
 .login-box{
     height: 90%;
     width: 100%;
 }
 .login-box button{
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .alternatives{
     width: 100%;
@@ -141,6 +145,14 @@ h2:after{
 
 .alternatives *{
     display: inline-block;
+}
+.alternatives a{
+    padding-bottom: 7px;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s;
+}
+.alternatives a:hover{
+    border-bottom: 2px solid #00a8ff;
 }
 .floatRight{
     float:left;
