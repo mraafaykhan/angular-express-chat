@@ -202,15 +202,46 @@ header{
     width: 25%;
     height: 100%;
     overflow-x: scroll;
-    background-color: #7f8fff;
+    background-color: rgb(223, 223, 223);
 }
 
 .messageBoxFlex{
+    color:#718093;
     height: 15%;
     width: 100%;
-    margin: 5px 0;
-    background-color: pink;
+    margin: 1px 0;
+    background-color: #FFF;
+    padding-left: 10px;
 }
+.messageBoxFlex i{
+    font-size: 200%;
+    border-radius: 50%;
+    float: left;
+}
+.time{
+    float: right;
+    font-size: 65%;
+    color:#718093;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.messageBoxFlex p{
+    font-size: 80%;
+    font-weight: 300;
+}
+.messageBoxFlex:first-of-type{
+    margin-top: 0;
+}
+.messageBoxFlex:last-of-type{
+    margin-bottom: 0;
+}
+.usernameFlex{
+    font-size: 80%;
+    font-weight: 400;
+    margin-top: 17px;
+    margin-left: 15px;
+}
+
 
 /* MessageListFlex end */
 
@@ -218,15 +249,134 @@ header{
 
 
 
-
+/* MessageDetailsFlex div */
 .messagesDetailsFlex{
     width: 50%;
     height: 100%;
-    background-color: #ec32df;
+    background-color: #fff;
+    border-left: 1px solid rgb(223, 223, 223);
 }
+.messageDetailsBox{
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 85%;
+    line-height: 145%;
+    overflow: scroll;
+    width: 100%;
+    height: 94%;
+}
+
+
+
+
+/* messageSendBox  */
+.messageSendBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 6%;
+    background-color: olivedrab;
+    border-top: 1px solid rgb(223, 223, 223);
+}
+
+.messageSendBox input{
+    width: 100%;
+    height: 100%;
+    border:0;
+    font-size: 80%;
+
+}
+.messageButton button{
+    font-size: 150%;
+    height: 100%;
+    width: 100%;
+    border:0;
+    text-decoration: none;
+    background-color: rgb(241, 241, 241);
+    transition: background-color 0.2s;
+
+}
+.messageButton button:hover{
+    background-color: rgb(223, 223, 223);
+    
+}
+
+
+.messageInput{
+    width: 93%;
+    height: 100%;
+}
+.messageButton{
+    width: 7%;
+    height: 100%;
+}
+/* messageSendBox end */
+
+
+
+
+
+
+.leftMessage,.rightMessage{
+    width: 100%;
+    margin-top: 10px;
+}
+.leftMessage p,.rightMessage p{
+    border-radius: 15px;
+    padding: 0 10px;
+    font-weight: 300;
+}
+.messageDetailsBox >:first-child{
+    margin-top: 1px;
+}
+
+.leftMessage p{
+    
+    float: left;
+    color: #fff;
+    max-width: 85%;
+    background-color: #7f8fff;
+    text-align: left;
+    margin-left: 5px;
+}
+.rightMessage p{
+    margin-right: 5px;
+    text-align: right;
+    float:right;
+    color:#fff;
+    background-color: #00a8ff;
+    max-width: 85%;
+}
+/* MessageDetailsFlex div end*/
+
 .conversationDetailsFlex{
     width: 25%;
     height: 100%;
-    background-color: #000;
+    background-color: #fff;
+    border-left: 1px solid rgb(223, 223, 223);
+    text-align: center;
+    
+
+}
+.imageUserName{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.imageUserName i, .userNameX{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.imageUserName i{
+    font-size: 300%;
+}
+.conversationDetailsFlex h3{
+    color: #718093;
+    font-size: 100%;
+}
+.conversationDetailsFlex *{
+    float: none;
 }
 
