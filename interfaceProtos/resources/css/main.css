@@ -39,12 +39,7 @@ a{
     clear: both;
     display: table;
 }
-header{
-    width:100%;
-    background-color:#718093;
-    padding : 10px 0;
-    text-align: center;
-}
+
 h1,h2,h3{
     font-weight: 100;
     text-transform: uppercase;
@@ -73,8 +68,7 @@ h3{
 */
 .main{
     width: 75%;
-    height: 100vh;
-    max-height: 100%;
+    height: inherit;
     float: left;
     /* position: absolute;
     top:0;
@@ -94,7 +88,7 @@ h3{
     overflow-y: scroll;    
     flex-direction: column;
     width: 25%;
-    height: 100%;
+    height: 100vh;
     background-color:#fff;
     float: left;
     padding-bottom: 54px;
@@ -103,7 +97,7 @@ h3{
 /* message-details */
 .message-details{
     float: left;
-    width: 50%;
+    width: 75%;
     height: 100vh;
     background-color:#00a8ff;
 }
@@ -179,3 +173,60 @@ h3{
     width: 90%;
 
 }
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header{
+    width:100%;
+    background-color:#718093;
+    padding : 10px 0;
+    text-align: center;
+    height: 8%;
+}
+.contentDiv{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 92%;
+    background-color: #00a8ff;
+}
+
+
+/* MessagesListFlex */
+.messagesListFlex{
+    width: 25%;
+    height: 100%;
+    overflow-x: scroll;
+    background-color: #7f8fff;
+}
+
+.messageBoxFlex{
+    height: 15%;
+    width: 100%;
+    margin: 5px 0;
+    background-color: pink;
+}
+
+/* MessageListFlex end */
+
+
+
+
+
+
+.messagesDetailsFlex{
+    width: 50%;
+    height: 100%;
+    background-color: #ec32df;
+}
+.conversationDetailsFlex{
+    width: 25%;
+    height: 100%;
+    background-color: #000;
+}
+
