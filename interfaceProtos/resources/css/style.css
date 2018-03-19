@@ -83,7 +83,7 @@ h2:after{
     width: 80px;
     display: block;
     margin:20px auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
 }
 
@@ -168,4 +168,54 @@ Loginpage stuff */
     background-position: fixed;
     background-size: cover;
     height: 100vh;
+}
+/* 
+
+
+ New CSSS
+
+*/
+
+.login-section{
+    color: #718093;
+    background-image: none;
+    background-size: cover;
+    height: 100vh;
+    background-position: fixed;
+}
+.loginComponents{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-70%);
+    display:flex;
+    flex-direction: column;
+}
+.loginComponents label{
+    margin-bottom: 10px;
+}
+.loginComponents input{
+    padding-left: 5px;
+    font-size: 80%;
+    border-radius: 15px;
+    border:1px solid rgb(223, 223, 223);
+    margin-bottom: 20px;
+}
+.loginComponents input:last-of-type{
+    margin-bottom: 50px;
+}
+.loginComponents button{
+    color:#fff;
+    background-color :#00a8ff;
+    padding: 5px 0;
+    border:0;
+    border-radius: 15px;
+    font-size: 70%;
+}
+body{
+    height: 100vh;
+    background-image: url(img/back2.jpeg);
+    background-position: fixed;
+    background-size: cover;
+
 }
