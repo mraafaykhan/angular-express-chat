@@ -202,7 +202,7 @@ Loginpage stuff */
     margin-bottom: 20px;
 }
 .loginComponents input:last-of-type{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .loginComponents button{
     color:#fff;
@@ -211,6 +211,31 @@ Loginpage stuff */
     border:0;
     border-radius: 15px;
     font-size: 70%;
+    margin-bottom: 30px;
+}
+.loginComponents a{
+    margin:0;
+    display: inline-block;
+    text-decoration: none;
+    color : #00a8ff;
+    font-size: 80%;
+    font-weight: 400;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+.loginComponents a:hover{
+    border-bottom: 2px solid #00a8ff;
+}
+.loginComponents a:first-of-type{
+    float: left;
+}
+.loginComponents a:last-of-type{
+    float: right;
+}
+.backgroundDiv{
+    padding : 7px 5px;
+    background-color: rgba(223, 223, 223,0.7)
 }
 body{
     height: 100vh;
