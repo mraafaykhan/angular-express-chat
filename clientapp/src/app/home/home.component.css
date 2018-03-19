@@ -1,0 +1,389 @@
+/*
+    our color #00a8ff;
+*/
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+*:focus{
+  outline: 0;
+}
+html{
+  margin:0;
+  padding: 0;
+  font-family:  'IBM Plex Sans','Arial', sans-serif;
+  font-size: 22px;
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+
+
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+a{
+  text-decoration: none;
+  color :  #00a8ff;
+}
+/* Resuable Components */
+.row{
+  width: 1140px;
+  display: block;
+  margin: 0 auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1,h2,h3{
+  font-weight: 100;
+  text-transform: uppercase;
+}
+h1{
+  font-size: 220%;
+  word-spacing: 5px;
+
+}
+h2{
+  font-size: 250%;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+h3{
+  color: #FFF;
+  font-size: 120%;
+  font-weight: 300;
+  text-align: center;
+  display: inline-block;
+}
+/*
+  section-main
+*/
+.main{
+  width: 75%;
+  height: inherit;
+  float: left;
+  /* position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  background-color: #000;
+}
+.wrapper{
+  width: 100%;
+  height: 100vh;
+
+}
+
+/* messages list section */
+.messages-list{
+  overflow-y: scroll;
+  flex-direction: column;
+  width: 25%;
+  height: 100vh;
+  background-color:#fff;
+  float: left;
+  padding-bottom: 54px;
+}
+
+/* message-details */
+.message-details{
+  float: left;
+  width: 75%;
+  height: 100vh;
+  background-color:#00a8ff;
+}
+.conversation-details{
+  float: left;
+  width: 25%;
+  height: 100%;
+  background-color: #7f8fff;
+}
+
+/* Messages box */
+.message-box{
+  display: block;
+  height: 10%;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 5px;
+  background-color: #e34d223f;
+  border: 1px solid #fff;
+  font-size: 80%;
+  transition: background-color 0.3s;
+
+}
+.message-box:hover{
+  background-color: #ebebeb;
+}
+.message-box i, span{
+  float:left;
+  margin-right: 5px;
+}
+.time{
+  float: right;
+  font-size: 65%;
+  color:#718093;
+
+}
+.message-box p{
+  display: block;
+  font-weight: 300;
+}
+.messageUserDetails{
+  margin-bottom: 5px;
+}
+
+
+/*
+  conversation details section
+*/
+
+.chatMessages{
+  height: 85%;
+  width: 100%;
+  background-color: aqua;
+}
+.sendBox{
+  height: 15%;
+  width: 100%;
+  background-color: blueviolet;
+}
+.sendBox *{
+  height: 100%;
+  border:0;
+  padding:0;
+}
+.sendBox button{
+  float: left;
+  width: 10%;
+  border-left: 1px solid #718093;
+  font-size: 200%;
+}
+
+.sendBox input{
+  float: left;
+  width: 90%;
+
+}
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header{
+  width:100%;
+  background-color:#718093;
+  padding : 10px 0;
+  text-align: center;
+  height: 8%;
+}
+.contentDiv{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 92%;
+  background-color: #00a8ff;
+}
+
+
+/* MessagesListFlex */
+.messagesListFlex{
+  width: 25%;
+  height: 100%;
+  overflow-x: scroll;
+  background-color: rgb(223, 223, 223);
+}
+
+.messageBoxFlex{
+  color:#718093;
+  height: 15%;
+  width: 100%;
+  margin: 1px 0;
+  background-color: #FFF;
+  padding-left: 10px;
+}
+.messageBoxFlex i{
+  font-size: 200%;
+  border-radius: 50%;
+  float: left;
+}
+.time{
+  float: right;
+  font-size: 65%;
+  color:#718093;
+  margin-right: 10px;
+  margin-top: 17px;
+}
+.messageBoxFlex p{
+  font-size: 80%;
+  font-weight: 300;
+}
+.messageBoxFlex:first-of-type{
+  margin-top: 0;
+}
+.messageBoxFlex:last-of-type{
+  margin-bottom: 0;
+}
+.usernameFlex{
+  font-size: 80%;
+  font-weight: 400;
+  margin-top: 17px;
+  margin-left: 15px;
+}
+
+
+/* MessageListFlex end */
+
+
+
+
+
+/* MessageDetailsFlex div */
+.messagesDetailsFlex{
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid rgb(223, 223, 223);
+}
+.messageDetailsBox{
+  /* display: flex;
+  flex-direction: column; */
+  font-size: 85%;
+  line-height: 145%;
+  overflow-x: scroll;
+
+  width: 100%;
+  height: 94%;
+}
+
+
+
+
+/* messageSendBox  */
+.messageSendBox{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 6%;
+  background-color: olivedrab;
+  border-top: 1px solid rgb(223, 223, 223);
+}
+
+.messageSendBox input{
+  width: 100%;
+  height: 100%;
+  border:0;
+  font-size: 75%;
+  padding-left: 10px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.messageButton button{
+  font-size: 150%;
+  height: 100%;
+  width: 100%;
+  border:0;
+  text-decoration: none;
+  background-color: rgb(241, 241, 241);
+  transition: background-color 0.2s;
+
+}
+.messageButton button:hover{
+  background-color: rgb(223, 223, 223);
+
+}
+
+
+.messageInput{
+  width: 93%;
+  height: 100%;
+}
+.messageButton{
+  width: 7%;
+  height: 100%;
+}
+/* messageSendBox end */
+
+
+
+.leftMessage,.rightMessage{
+  width: 100%;
+  margin-top: 10px;
+  font-size: 85%;
+}
+
+.leftMessage p,.rightMessage p{
+  border-radius: 15px;
+  padding: 0 10px;
+  font-weight: 200;
+}
+.messageDetailsBox >:first-child{
+  margin-top: 3px;
+}
+.messageDetailsBox >:last-child{
+  margin-bottom: 5px;
+}
+
+.leftMessage p{
+
+  float: left;
+  color: #fff;
+  max-width: 85%;
+  background-color: #7f8fff;
+  text-align: left;
+  margin-left: 5px;
+}
+.rightMessage p{
+  margin-right: 5px;
+  text-align: right;
+  float:right;
+  color:#fff;
+  background-color: #00a8ff;
+  max-width: 85%;
+}
+/* MessageDetailsFlex div end*/
+
+.conversationDetailsFlex{
+  width: 25%;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid rgb(223, 223, 223);
+  text-align: center;
+  color:#000;
+
+}
+.imageUserName{
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.imageUserName i, .userNameX{
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.imageUserName i{
+  font-size: 300%;
+}
+.conversationDetailsFlex h3{
+  color: #718093;
+  font-size: 100%;
+}
+.conversationDetailsFlex *{
+  float: none;
+}
+

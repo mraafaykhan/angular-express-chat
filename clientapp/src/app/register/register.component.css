@@ -71,6 +71,7 @@ h1{
 
 }
 h2{
+  color:#fff;
   font-size: 200%;
   margin-bottom: 20px;
   letter-spacing: 2px;
@@ -164,6 +165,7 @@ h2:after{
 Loginpage stuff */
 
 .background{
+
   background-position: fixed;
   background-size: cover;
   height: 100vh;
@@ -191,9 +193,11 @@ New CSSS
   flex-direction: column;
 }
 .loginComponents label{
+  color:#fff;
   margin-bottom: 10px;
 }
 .loginComponents input{
+
   padding-left: 5px;
   font-size: 80%;
   border-radius: 15px;
@@ -242,7 +246,7 @@ New CSSS
 }
 .bodyDiv{
   height: 100vh;
-  background-image: url(../../assets/resources/css/img/back2.jpeg);
+  background-image: url(../../assets/resources/css/img/back3.jpeg);
   background-position: fixed;
   background-size: cover;
 
