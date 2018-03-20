@@ -8,7 +8,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  login(email: String, password: String): Observable<any>{
+  login(email: String, password: String): Observable<any> {
     return this.http.post('http://localhost:3000/user/login', {
       email: email,
       password: password
