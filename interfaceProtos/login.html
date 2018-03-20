@@ -22,10 +22,10 @@
             </h2>
 
             <label for="">Username</label>
-            <input type="text">
+            <input #username type="text">
             <label for="">Password</label>
-        <input type="password">
-            <button >Login</button>
+        <input #password type="password">
+            <button (click)='this.login(username,password)' >Login</button>
             <div class="">
                 <a class="clearfix" href="">Sign up</a>
                 <a class="clearfix" href="">Forgot password</a>
