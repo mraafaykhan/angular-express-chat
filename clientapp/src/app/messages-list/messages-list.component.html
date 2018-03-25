@@ -1,3 +1,13 @@
-<p>
-  messages-list works!
-</p>
+<div class="messageBoxFlex">
+
+  <div class="clearfix">
+      <i class="ion-person"></i>
+      <span class="usernameFlex">
+          {{message.username}}
+      </span>
+      <span class="time">{{message.lastTime}}</span>
+  </div>
+  <p>
+      {{message.messageText}}
+  </p>
+</div>

@@ -8,24 +8,10 @@
         </header>
         <div class="contentDiv">
             <div class="messagesListFlex">
-                <div class="messageBoxFlex">
-                    <div class="clearfix">
-                        <i class="ion-person"></i>
-                        <span class="usernameFlex">
-                            Username1
-                        </span>
-                        <span class="time">10:23 PM</span>
-                    </div>
-                    <p>
-                        Hi, How are you I've missed you...
-                    </p>
-                </div>
-                <div class="messageBoxFlex">
+            <app-messages-list [message]="message" (click)='setDetailedMessage(message)'></app-messages-list>
+            <app-messages-list (click)='setDetailedMessage(message)'></app-messages-list>
+            <app-messages-list></app-messages-list>
 
-                </div>
-                <div class="messageBoxFlex">
-
-                </div>
                 <div class="messageBoxFlex">
 
                 </div>

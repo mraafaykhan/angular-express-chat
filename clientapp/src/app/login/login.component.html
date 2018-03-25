@@ -7,6 +7,9 @@
         </h1>
     </header>
     <section class="login-section">
+      <div *ngIf='errorMessage' class="errorMessage">
+        {{errorMessage}}
+      </div>
         <div class="loginComponents">
             <h2>
                 Authenticate
