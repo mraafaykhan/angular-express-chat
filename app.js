@@ -5,13 +5,19 @@ let authController = require('./controllers/auth.controller');
 let mongoose = require('mongoose');
 
 
-
 // todo create a mongoose container and connect mongosoe to it
 
 mongoose.connect("mongodb://localhost:27000/triangles")
 let app = express();
+
+
 app.use(cors());
 app.use(bodyParser.json());
+
+
+
+
+
 
 app.get('/', function(req,res){
     res.json({
@@ -21,4 +27,10 @@ app.get('/', function(req,res){
 app.use('/user', authController);
 
 
-app.listen(3000,()=> console.log('app listening on port 3000'));
+let server = require('http').Server(app);
+module.exports.server = server;
+let socketController = require("./controllers/socket.controller");
+
+server.listen(3000);
+
+

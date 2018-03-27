@@ -9,8 +9,8 @@
         <div class="contentDiv">
             <div class="messagesListFlex">
             <app-messages-list [message]="message" (click)='setDetailedMessage(message)'></app-messages-list>
-            <app-messages-list (click)='setDetailedMessage(message)'></app-messages-list>
-            <app-messages-list></app-messages-list>
+            <app-messages-list [message]="message" (click)='setDetailedMessage(message)'></app-messages-list>
+            <app-messages-list [message]="message" ></app-messages-list>
 
                 <div class="messageBoxFlex">
 
@@ -173,11 +173,11 @@
                 </div>
                 <div class="messageSendBox">
                     <div class="messageInput">
-                        <input type="text">
+                        <input #inputMessage type="text">
 
                     </div>
                     <div class="messageButton">
-                        <button class="ion-ios-paperplane-outline"></button>
+                        <button (click)='sendMessage(inputMessage.value)' class="ion-ios-paperplane-outline"></button>
                     </div>
                 </div>
             </div>
